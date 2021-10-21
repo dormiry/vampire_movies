@@ -1,0 +1,69 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+/* HOME PAGE STYLES */
+
+.home-main-box {
+    background-color: #F50000;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 90%;
+    height: 400px;
+    float: right;
+    margin: 15% -10px 0 0;
+    outline: auto;
+}
+
+.home-title {
+    font-family: 'glaive', sans-serif;
+    width: 515px;
+    height: 150px;
+    font-size: 90px;
+    color: #F5F5F5;
+    line-height: 75%;
+    transform: rotate(-10deg);
+    margin: auto 0 auto 200px;
+}
+
+.home-title-sup {
+    display: inline-block;
+    font-size: 45px;
+    margin-left: 25px;
+}
+
+.home-frame img {
+    top: -55px;
+    left: -50px;
+    position: absolute;
+    height: 500px;
+    z-index: -1;
+}
+
+/* NEXT BUTTON */
+
+.next-button {
+    align-self: flex-end;
+    background-color: #0B0B0B;
+    width: 100px;
+    height: 55px;
+    outline: auto;
+}
+
+.next-button img {
+    display: block;
+    margin: 0 auto 0 auto;
+    padding-top: 10px;
+    width: 50%;
+}
