@@ -1,11 +1,4 @@
-* {
-	box-sizing: border-box;
-}
-
-html, body {
-    max-width: 100%;
-    height: 100%;
-}
+* { box-sizing: border-box; }
 
 body {
     background-color: #F5F5F5;
@@ -16,54 +9,75 @@ body {
 .home-main-box {
     background-color: #F50000;
     background-blend-mode: multiply;
+    opacity: 90%;
     display: flex;
     flex-direction: row;
     position: relative;
-    width: 90%;
-    height: 400px;
     float: right;
-    margin: 15% -10px 0 0;
-    outline: auto;
+    width: 85%;
+    min-height: 500px;
+    margin: 10% -8px 0 0;
 }
 
 .home-title {
-    font-family: 'glaive', sans-serif;
-    width: 515px;
-    height: 150px;
-    font-size: 90px;
     color: #F5F5F5;
+    margin: auto 0 auto 194px;
+    font-family: 'glaive', serif;
+    font-size: 800%;
     line-height: 75%;
+    white-space: nowrap;
     transform: rotate(-10deg);
-    margin: auto 0 auto 200px;
 }
 
 .home-title-sup {
     display: inline-block;
-    font-size: 45px;
-    margin-left: 25px;
+    font-size: 30%;
+    margin: 0 -15px 0 40px;
 }
 
 .home-frame img {
-    top: -55px;
-    left: -50px;
     position: absolute;
-    height: 500px;
+    top: -95px;
+    left: -95px;
+    height: 690px;
     z-index: -1;
 }
 
 /* NEXT BUTTON */
 
 .next-button {
-    align-self: flex-end;
+    position: absolute;
     background-color: #0B0B0B;
-    width: 100px;
-    height: 55px;
-    outline: auto;
+    width: 120px;
+    height: 70px;
+    bottom:0;
+    right:0;
+    display: flex;
+    justify-content: center;
 }
 
-.next-button img {
+.next-button svg {
+    margin: auto;
+    fill: #F50000;
+}
+
+.next-button:hover, svg:hover {
+    background-color: #333333;
+    fill: #F5F5F5;
+    transition: 0.4s;
+}
+
+.hidden-hover-text {
+    position: absolute;
+    display: none;
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 300;
+    font-size: 130%;
+    width: 700px;
+    margin: 17px 750px 0 0;
+    color: #F5F5F5;
+}
+
+.next-button:hover .hidden-hover-text {
     display: block;
-    margin: 0 auto 0 auto;
-    padding-top: 10px;
-    width: 50%;
 }
