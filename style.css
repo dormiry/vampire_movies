@@ -1,82 +1,110 @@
-* { box-sizing: border-box; }
+@font-face {
+  font-family: "Glaive";
+  src: url("vampire_movies_assets/Glaive Regular.woff") format("woff");
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-    background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 /* HOME PAGE STYLES */
 
 .home-main-box {
-    background-color: #F50000;
-    mix-blend-mode: multiply;
-    opacity: 90%;
-    display: flex;
-    position: relative;
-    float: right;
-    width: 85%;
-    min-height: 500px;
-    margin: 10% -8px 0 0;
+  background-color: #f50000;
+  mix-blend-mode: multiply;
+  opacity: 90%;
+  display: flex;
+  position: relative;
+  float: right;
+  width: 85%;
+  min-height: 500px;
+  margin: 10% -8px 0 0;
+  z-index: 1;
 }
 
 .home-title {
-    color: #F5F5F5;
-    margin: auto 0 auto 194px;
-    font-family: 'glaive', serif;
-    font-size: 800%;
-    line-height: 75%;
-    white-space: nowrap;
-    transform: rotate(-10deg);
+  color: #f5f5f5;
+  margin: auto 0 auto 194px;
+  font-family: "Glaive", serif;
+  font-size: 800%;
+  line-height: 75%;
+  white-space: nowrap;
+  transform: rotate(-10deg);
 }
 
 .home-title-sup {
-    display: inline-block;
-    font-size: 30%;
-    margin: 0 -15px 0 40px;
+  display: inline-block;
+  font-size: 30%;
+  margin: 0 -15px 0 40px;
+  vertical-align: text-top;
 }
 
 .home-frame img {
-    position: absolute;
-    top: -95px;
-    left: -95px;
-    height: 690px;
-    z-index: -1;
+  position: absolute;
+  top: -95px;
+  left: -95px;
+  height: 690px;
+  z-index: -1;
+  mix-blend-mode: screen;
 }
 
 /* NEXT BUTTON - HOME PAGE */
 
 .next-button {
-    position: absolute;
-    background-color: #0B0B0B;
-    width: 120px;
-    height: 70px;
-    bottom:0;
-    right:0;
-    display: flex;
-    justify-content: center;
+  position: absolute;
+  background-color: #0b0b0b;
+  width: 120px;
+  height: 70px;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .next-button svg {
-    margin: auto;
-    fill: #F50000;
+  margin: auto;
+  fill: #f50000;
 }
 
-.next-button:hover, svg:hover {
-    background-color: #333333;
-    fill: #F5F5F5;
-    transition: 0.4s;
+.arrow-anim {
+  background-color: #333333;
+  fill: #f5f5f5;
+  animation-name: arrow-fade;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+/* svg {
+  animation-name: arrow-fade;
+} */
+
+@keyframes arrow-fade {
+  0% {
+    background-color: #0b0b0b;
+    fill: #f50000;
+  }
+  100% {
+    background-color: #333;
+    fill: #f5f5f5;
+  }
 }
 
 .hidden-hover-text {
-    position: absolute;
-    display: none;
-    font-family: 'futura-pt', sans-serif;
-    font-weight: 300;
-    font-size: 130%;
-    width: 700px;
-    margin: 17px 750px 0 0;
-    color: #F5F5F5;
+  position: absolute;
+  right: 130px;
+  opacity: 0;
+  transition: 0.4s;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 300;
+  font-size: 130%;
+  color: #f5f5f5;
+  white-space: nowrap;
 }
 
 .next-button:hover .hidden-hover-text {
-    display: block;
+  opacity: 1;
 }
