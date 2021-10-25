@@ -1,6 +1,19 @@
 @font-face {
   font-family: "Glaive";
   src: url("vampire_movies_assets/Glaive Regular.woff") format("woff");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family:"futura-pt";
+    src:url("https://use.typekit.net/af/309dfe/000000000000000000010091/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),
+    url("https://use.typekit.net/af/309dfe/000000000000000000010091/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),
+    url("https://use.typekit.net/af/309dfe/000000000000000000010091/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight:700;
 }
 
 * {
@@ -9,14 +22,13 @@
 
 body {
   background-color: #f5f5f5;
+  height: 100%;
 }
 
 /* HOME PAGE STYLES */
 
 .home-main-box {
   background-color: #f50000;
-  mix-blend-mode: multiply;
-  opacity: 90%;
   display: flex;
   position: relative;
   float: right;
@@ -24,22 +36,23 @@ body {
   min-height: 500px;
   margin: 10% -8px 0 0;
   z-index: 1;
+  outline: auto;
 }
 
 .home-title {
   color: #f5f5f5;
   margin: auto 0 auto 194px;
   font-family: "Glaive", serif;
-  font-size: 800%;
-  line-height: 75%;
+  font-size: 130px;
+  line-height: 55%;
   white-space: nowrap;
   transform: rotate(-10deg);
 }
 
 .home-title-sup {
   display: inline-block;
-  font-size: 30%;
-  margin: 0 -15px 0 40px;
+  font-size: 60px;
+  margin: 24px -15px 0 40px;
   vertical-align: text-top;
 }
 
@@ -47,25 +60,38 @@ body {
   position: absolute;
   top: -95px;
   left: -95px;
-  height: 690px;
+  height: 693px;
   z-index: -1;
-  mix-blend-mode: screen;
+  mix-blend-mode: multiply;
 }
 
-/* NEXT BUTTON - HOME PAGE */
+/* NEXT BUTTON: HOME PAGE (W/ Animation) & SECONDARY PAGE*/
 
+/* Home Page */
 .next-button {
   position: absolute;
+  bottom: 0;
+  right: 0;
   background-color: #0b0b0b;
   width: 120px;
   height: 70px;
-  bottom: 0;
-  right: 0;
   display: flex;
   justify-content: center;
 }
 
-.next-button svg {
+/* All other pages */
+.next-button-secondary {
+  position: absolute;
+  background-color: #0b0b0b;
+  width: 120px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+/* SVG + ANIMATION */
+.next-button svg, .next-button-secondary svg {
+  width: 45px;
   margin: auto;
   fill: #f50000;
 }
@@ -77,10 +103,6 @@ body {
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
 }
-
-/* svg {
-  animation-name: arrow-fade;
-} */
 
 @keyframes arrow-fade {
   0% {
@@ -95,16 +117,113 @@ body {
 
 .hidden-hover-text {
   position: absolute;
+  text-align: right;
   right: 130px;
   opacity: 0;
-  transition: 0.4s;
+  transition: 0.3s;
   font-family: "futura-pt", sans-serif;
-  font-weight: 300;
-  font-size: 130%;
+  font-weight: 200;
+  font-size: 19px;
   color: #f5f5f5;
+  margin: 7px 20px 0 0;
   white-space: nowrap;
 }
 
 .next-button:hover .hidden-hover-text {
   opacity: 1;
 }
+
+/* SECONDARY PAGE STYLES */
+.container {
+    width: 90%;
+    float: right;
+    position: relative;
+    margin: 0 -8px 0 0;
+    padding: 100px 0 0 0;
+    
+}
+
+/* TOP DIV */
+
+.top-row {
+    font-family: "futura-pt", normal, sans-serif;
+    color: #0b0b0b;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin: 0 0 10px 0;
+
+}
+.summary {
+    min-width: 300px;
+    max-width: 300px;
+    height: 150px;
+    margin: 0 60px 0 0;
+}
+
+.genre-director {
+    margin: 0 70px 0 0;
+    white-space: nowrap;
+    height: 100%;
+}
+
+p {
+  font-size: 18px;
+  margin: 0 0 28px 0;
+}
+
+h1 {
+    font-family: "Glaive", serif;
+    font-size: 110px;
+    margin-bottom: -10px;
+    white-space: nowrap;
+}
+
+h2 {
+    line-height: 15%;
+    font-size: 18px;
+}
+
+/* BOTTOM DIV */
+
+.bottom-row {
+  background-color: #f50000;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 350px;
+  outline: auto;
+}
+
+h3 {
+    font-family: "Glaive", serif;
+    color: #f5f5f5;
+    font-size: 200px;
+    margin: 130px 0 0 -8px;
+    outline: auto;
+}
+
+
+/* NAV STYLES */
+
+ul, a, a:visited {
+  text-decoration: none;
+  list-style-type: none;
+  color: #B9B9B9;
+  position: relative;
+  font-size: 17px;
+  line-height: 20px;
+  margin: 0 0 52px -40px;
+  align-self: flex-end;
+}
+
+a.active, a.active:hover {
+  color:#0b0b0b;
+}
+
+a:hover {
+  color: #f50000;
+  transition-duration: .4s;
+}
+
+/* NEXT BUTTON STYLES */

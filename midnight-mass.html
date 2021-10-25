@@ -5,10 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/gfa2hkz.css">
-    <link rel="stylesheet" href="vampire_movies_assets/glaive.otf">
     <title>Vampire Films</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/gfa2hkz.css" />
 </head>
 <body>
-    
+    <div class="container">
+        <!-- TOP ROW -->
+        <h1>midnight Mass</h1>
+        <div class="top-row">
+            <div class="summary">
+                <h2>SUMMARY</h2>
+                <p>The arrival of a charismatic young priest brings glorious miracles, ominous mysteries and renewed religious fervor to a dying town desperate to believe.</p>
+            </div>
+            <div class="genre-director">
+                <h2>GENRE</h2>
+                <p>Mystery, Drama, Horror</p>
+                <h2>DIRECTOR</h2>
+                <p>Mike Flanagan</p>
+            </div>
+        </div>
+
+        <!-- NAV / BOTTOM ROW -->
+        <div class="bottom-row">
+            <ul>
+                <!--  -->
+                <li><a class="active" href="/midnight-mass.html">&#9632;</a></li>
+                <li><a href="/interview.html">&#9632;</a></li>
+                <li><a href="/thirst.html">&#9632;</a></li></a>
+                <li><a href="/right-one-in.html">&#9632;</a></li>
+            </ul>
+            <h3>01.</h3>
+
+            <!-- NEXT BUTTON -->
+            <a href="interview.html">
+                <div class="next-button-secondary animatedParent">
+                  <svg width="56" height="40" viewBox="0 0 56 40" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="52.0699" y="17.0854" width="5.69515" height="52.0699" transform="rotate(90 52.0699 17.0854)" />
+                    <rect width="5.77402" height="28.423" transform="matrix(0.718334 0.695698 -0.715395 0.698721 51.0392 15.9362)" />
+                    <rect width="5.77402" height="28.423" transform="matrix(-0.718334 0.695698 0.715395 0.698721 34.8532 -2.28882e-05)" />
+                  </svg>
+                </div>
+              </a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(".next-button-secondary").hover(function () {
+        $(".next-button-secondary").toggleClass("arrow-anim")
+        $(".next-button-secondary svg").toggleClass("arrow-anim")
+      })
+    </script>
 </body>
 </html>
