@@ -156,6 +156,8 @@ body {
 
 }
 
+/* Movie Title Headers  */
+
 h1 {
   font-family: "Glaive", serif;
   font-size: 100px;
@@ -191,6 +193,7 @@ h5 {
   margin-top: 201px;
 }
 
+/* Movie Information */
 
 .summary {
     min-width: 300px;
@@ -204,7 +207,6 @@ h5 {
     white-space: nowrap;
     height: 100%;
 }
-
 
 h2 {
   font-family: futura-pt, sans-serif;
@@ -236,7 +238,8 @@ h3 {
     margin: 100px 0 0 -8px;
 }
 
-/* NAV STYLES */
+/* VERTICAL NAV STYLES */
+
 .nav-block {
   width: 7%;
   height: 864px;
@@ -273,6 +276,8 @@ a:hover {
   transition-duration: .4s;
 } 
 
+/* Bat Home Button */
+
 .bat {
   fill:#0b0b0b;
   position: absolute;
@@ -289,6 +294,8 @@ a:hover {
 }
 
 /* IMAGES */
+
+/* Midnight Mass - Page 1 */
 
 .midnight-mass {
   position: absolute;
@@ -310,6 +317,8 @@ a:hover {
   transform: rotate(63.84deg);
 }
 
+/* Interview with the Vampire - Page 2 */
+
 .interview {
   position: absolute;
   bottom: 0;
@@ -329,6 +338,7 @@ a:hover {
   transform: rotate(68.84deg);
 }
 
+/* Thirst - Page 3 */
 .thirst {
   position: absolute;
   bottom: 0;
@@ -347,6 +357,8 @@ a:hover {
   mix-blend-mode: multiply;
   transform: rotate(63.84deg);
 }
+
+/* Let the Right One In - Page 4 */
 
 .the-right-one {
   position: absolute;
